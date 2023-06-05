@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n';
-import en from './en-US';
+// import en from './en-US';
 import cn from './zh-CN';
 
 export const LOCALE_OPTIONS = [
@@ -14,7 +14,7 @@ const i18n = createI18n({
   legacy: false,
   allowComposition: true,
   messages: {
-    'en-US': en,
+    // 'en-US': en,
     'zh-CN': cn,
   },
 });

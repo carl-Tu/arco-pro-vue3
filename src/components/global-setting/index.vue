@@ -6,7 +6,7 @@
       </template>
     </a-button>
   </div>
-  <a-drawer
+  <!-- <a-drawer
     :width="300"
     unmount-on-close
     :visible="visible"
@@ -19,7 +19,7 @@
     <Block :options="contentOpts" :title="$t('settings.content')" />
     <Block :options="othersOpts" :title="$t('settings.otherSettings')" />
     <a-alert>{{ $t('settings.alertContent') }}</a-alert>
-  </a-drawer>
+  </a-drawer> -->
 </template>
 
 <script lang="ts" setup>
