@@ -1,16 +1,10 @@
 <template>
-    <div class="container">
+  <div class="container">
     <Breadcrumb :items="['测试', 'test']" />
     <div class="layout">
-      <div class="layout-left-side">
-        1测试
-      </div>
-      <div class="layout-content">
-        2测试
-      </div>
-      <div class="layout-right-side">
-        3测试
-      </div>
+      <div class="layout-left-side"> 1测试 </div>
+      <div class="layout-content"> 2测试 </div>
+      <div class="layout-right-side"> 3测试 </div>
     </div>
   </div>
 </template>
@@ -24,9 +18,9 @@
 </script>
 
 <style lang="less" scoped>
-.container {
+  .container {
     padding: 0 20px 20px 20px;
-    .layout{
+    .layout {
       background: #fff;
     }
   }

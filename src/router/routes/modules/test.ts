@@ -6,7 +6,7 @@ const TEST: AppRouteRecordRaw = {
   name: 'test',
   component: DEFAULT_LAYOUT,
   meta: {
-    locale: 'menu.test',
+    locale: '测试',
     requiresAuth: true,
     icon: 'icon-dashboard',
     order: 0,
