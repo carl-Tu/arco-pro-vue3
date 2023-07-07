@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Breadcrumb :items="['测试', 'test']" />
+    <Breadcrumb :items="['测试', '二级']" />
     <div class="layout">
       <div class="layout-left-side"> 1测试 </div>
       <div class="layout-content"> 2测试 </div>

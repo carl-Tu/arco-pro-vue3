@@ -17,7 +17,7 @@ const TEST: AppRouteRecordRaw = {
       name: 'Workplace1',
       component: () => import('@/views/dashboard/test/index.vue'),
       meta: {
-        locale: 'test',
+        locale: '测试菜单',
         requiresAuth: true,
         roles: ['admin'],
       },
