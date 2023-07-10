@@ -12,14 +12,11 @@
     >
       <a-form-item
         field="username"
-        :rules="[{ required: true, message: $t('login.form.userName.errMsg') }]"
+        :rules="[{ required: true, message: '用户名不能为空' }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >
-        <a-input
-          v-model="userInfo.username"
-          :placeholder="$t('login.form.userName.placeholder')"
-        >
+        <a-input v-model="userInfo.username" :placeholder="'用户名'">
           <template #prefix>
             <icon-user />
           </template>
@@ -27,13 +24,13 @@
       </a-form-item>
       <a-form-item
         field="password"
-        :rules="[{ required: true, message: $t('login.form.password.errMsg') }]"
+        :rules="[{ required: true, message: '密码不能为空' }]"
         :validate-trigger="['change', 'blur']"
         hide-label
       >
         <a-input-password
           v-model="userInfo.password"
-          :placeholder="$t('login.form.password.placeholder')"
+          :placeholder="'用户密码'"
           allow-clear
         >
           <template #prefix>
@@ -68,14 +65,12 @@
   import { useRouter } from 'vue-router';
   import { Message } from '@arco-design/web-vue';
   import { ValidatedError } from '@arco-design/web-vue/es/form/interface';
-  import { useI18n } from 'vue-i18n';
   import { useStorage } from '@vueuse/core';
   import { useUserStore } from '@/store';
   import useLoading from '@/hooks/loading';
   import type { LoginData } from '@/api/user';
 
   const router = useRouter();
-  const { t } = useI18n();
   const errorMessage = ref('');
   const { loading, setLoading } = useLoading();
   const userStore = useUserStore();
@@ -104,12 +99,12 @@
         await userStore.login(values as LoginData);
         const { redirect, ...othersQuery } = router.currentRoute.value.query;
         router.push({
-          name: (redirect as string) || 'Workplace1',
+          name: (redirect as string) || 'Verification',
           query: {
             ...othersQuery,
           },
         });
-        Message.success(t('login.form.login.success'));
+        Message.success('欢迎使用');
         const { rememberPassword } = loginConfig.value;
         const { username, password } = values;
         // 实际生产环境需要进行加密存储。

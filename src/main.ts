@@ -4,7 +4,7 @@ import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import globalComponents from '@/components';
 import router from './router';
 import store from './store';
-import i18n from './locale';
+// import i18n from './locale';
 import directive from './directive';
 import './mock';
 import App from './App.vue';
@@ -21,7 +21,7 @@ app.use(ArcoVueIcon);
 
 app.use(router);
 app.use(store);
-app.use(i18n);
+// app.use(i18n);
 app.use(globalComponents);
 app.use(directive);
 

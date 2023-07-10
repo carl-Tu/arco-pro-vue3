@@ -6,18 +6,18 @@ const TEST: AppRouteRecordRaw = {
   name: 'test',
   component: DEFAULT_LAYOUT,
   meta: {
-    locale: '测试',
+    locale: '系统管理',
     requiresAuth: true,
     icon: 'icon-dashboard',
     order: 0,
   },
   children: [
     {
-      path: 'Workplace1',
-      name: 'Workplace1',
-      component: () => import('@/views/dashboard/test/index.vue'),
+      path: 'AccountNumber',
+      name: 'AccountNumber',
+      component: () => import('@/views/system/accountNumber/AccountNumber.vue'),
       meta: {
-        locale: '测试菜单',
+        locale: '账号管理',
         requiresAuth: true,
         roles: ['admin'],
       },
