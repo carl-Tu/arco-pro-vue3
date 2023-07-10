@@ -16,5 +16,9 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*", "src/**/*.vue"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "paths": {
+    // 路径映射，相对于baseUrl
+      "@/*":["src/*"]
+    }
 }

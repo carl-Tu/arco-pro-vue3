@@ -23,6 +23,17 @@ const VERIFICATION: AppRouteRecordRaw = {
       },
     },
     {
+      path: 'Verification/VerificationDetail',
+      name: 'Verification/VerificationDetail',
+      component: () => import('@/views/verification/device/detail/index.vue'),
+      meta: {
+        locale: '设备详情',
+        requiresAuth: true,
+        roles: ['admin'],
+        hideInMenu: true,
+      },
+    },
+    {
       path: 'Version',
       name: 'Version',
       component: () => import('@/views/verification/version/index.vue'),
@@ -30,6 +41,17 @@ const VERIFICATION: AppRouteRecordRaw = {
         locale: '版本管理',
         requiresAuth: true,
         roles: ['admin'],
+      },
+    },
+    {
+      path: 'Version/Detail',
+      name: 'Version/Detail',
+      component: () => import('@/views/verification/version/detail/index.vue'),
+      meta: {
+        locale: '版本详情',
+        requiresAuth: true,
+        roles: ['admin'],
+        hideInMenu: true,
       },
     },
     {

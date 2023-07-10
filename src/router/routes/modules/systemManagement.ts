@@ -9,7 +9,7 @@ const TEST: AppRouteRecordRaw = {
     locale: '系统管理',
     requiresAuth: true,
     icon: 'icon-dashboard',
-    order: 0,
+    order: 1,
   },
   children: [
     {

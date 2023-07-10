@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+  import router from '@/router';
+
+  function btn() {
+    router.push({ name: 'Verification/VerificationDetail' });
+  }
+</script>
+
 <template>
   <div class="container">
     <Breadcrumb :items="['测试', '二级']" />
@@ -5,11 +13,10 @@
       <div class="layout-left-side"> 1测试 </div>
       <div class="layout-content"> 2测试 </div>
       <div class="layout-right-side"> 3测试 </div>
+      <a-button type="primary" @click="btn">跳转详情</a-button>
     </div>
   </div>
 </template>
-
-<script lang="ts" setup></script>
 
 <script lang="ts">
   export default {
