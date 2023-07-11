@@ -2,11 +2,11 @@
   <div class="navbar">
     <div class="left-side">
       <a-space>
-        <img
+        <!-- <img
           alt="logo"
           src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfdba5317c0c20ce20e64fac803d52bc.svg~tplv-49unhts6dw-image.image"
-        />
-        <a-typography-title
+        /> -->
+        <!-- <a-typography-title
           :style="{ margin: 0, fontSize: '18px' }"
           :heading="5"
         >
@@ -16,7 +16,14 @@
           v-if="!topMenu && appStore.device === 'mobile'"
           style="font-size: 22px; cursor: pointer"
           @click="toggleDrawerMenu"
-        />
+        /> -->
+        <logoSvg />
+        <!-- <img
+          style="width: 132px; height: 24px"
+          :src="logoSvg"
+          alt=""
+          srcset=""
+        /> -->
       </a-space>
     </div>
     <div class="center-side">
@@ -46,10 +53,11 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed, inject } from 'vue';
+  import { computed } from 'vue';
   import { useAppStore, useUserStore } from '@/store';
   import useUser from '@/hooks/user';
   import Menu from '@/components/menu/index.vue';
+  import { logoSvg } from '@/assets/svg';
 
   const appStore = useAppStore();
   const userStore = useUserStore();
@@ -63,7 +71,7 @@
     logout();
   };
 
-  const toggleDrawerMenu = inject('toggleDrawerMenu') as () => void;
+  // const toggleDrawerMenu = inject('toggleDrawerMenu') as () => void;
 </script>
 
 <style scoped lang="less">
@@ -71,7 +79,8 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
-    background-color: var(--color-bg-2);
+    // background-color: var(--color-bg-2);
+    background: #1d2129;
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -89,9 +98,11 @@
     display: flex;
     padding-right: 20px;
     list-style: none;
+
     :deep(.locale-select) {
       border-radius: 20px;
     }
+
     li {
       display: flex;
       align-items: center;
@@ -102,16 +113,19 @@
       color: var(--color-text-1);
       text-decoration: none;
     }
+
     .nav-btn {
-      border-color: rgb(var(--gray-2));
       color: rgb(var(--gray-8));
       font-size: 16px;
+      border-color: rgb(var(--gray-2));
     }
+
     .trigger-btn,
     .ref-btn {
       position: absolute;
       bottom: 14px;
     }
+
     .trigger-btn {
       margin-left: 14px;
     }

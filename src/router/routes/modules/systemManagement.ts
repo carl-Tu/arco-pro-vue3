@@ -8,7 +8,7 @@ const TEST: AppRouteRecordRaw = {
   meta: {
     locale: '系统管理',
     requiresAuth: true,
-    icon: 'icon-dashboard',
+    icon: 'icon-settings',
     order: 1,
   },
   children: [

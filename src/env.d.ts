@@ -9,3 +9,11 @@ declare module '*.vue' {
 interface ImportMetaEnv {
   readonly VITE_API_BASE_URL: string;
 }
+
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.gif';
+declare module '*.svg';
+declare module '*.svg?url';
+declare module '*.svg?raw';
+declare module '*.svg?component';

@@ -8,7 +8,7 @@ const VERIFICATION: AppRouteRecordRaw = {
   meta: {
     locale: '核验一体机',
     requiresAuth: true,
-    icon: 'icon-dashboard',
+    icon: 'icon-robot',
     order: 0,
   },
   children: [
